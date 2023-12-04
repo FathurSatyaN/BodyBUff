@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 import fontType from "./font";
+=======
+<<<<<<< HEAD
+import fontType from "./font";
+=======
+import fontType from "./fonts";
+>>>>>>> 23ad015076fb57fc81376f5aa1004b200fe99843
+>>>>>>> 35aca34d54b2e2b4dd11b56d91d5468e1ff30d6e
 export {fontType} 

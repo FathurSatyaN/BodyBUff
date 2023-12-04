@@ -4,7 +4,15 @@
 
 import 'react-native';
 import React from 'react';
+<<<<<<< HEAD
 import App from '../src/App';
+=======
+<<<<<<< HEAD
+import App from '../src/App';
+=======
+import App from '../App';
+>>>>>>> 23ad015076fb57fc81376f5aa1004b200fe99843
+>>>>>>> 35aca34d54b2e2b4dd11b56d91d5468e1ff30d6e
 
 // Note: import explicitly to use the types shiped with jest.
 import {it} from '@jest/globals';
