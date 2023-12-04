@@ -4,14 +4,7 @@
 
 import 'react-native';
 import React from 'react';
-<<<<<<< HEAD
-import App from '../src/App';
-=======
 import App from '../App';
->>>>>>> 23ad015076fb57fc81376f5aa1004b200fe99843
-
-// Note: import explicitly to use the types shiped with jest.
-import {it} from '@jest/globals';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
