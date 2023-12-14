@@ -10,11 +10,22 @@ import {
     TouchableWithoutFeedback,
     ActivityIndicator
 } from "react-native";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3dc2f48a538df01da88182fbc651c4ef916f2c53
 import storage from '@react-native-firebase/storage';
 import firestore from '@react-native-firebase/firestore';
 import { Category, DirectboxSend, Image, Notification, SearchNormal1,Add,AddSquare } from 'iconsax-react-native'
 import FastImage from "react-native-fast-image";
 import { fontType } from "../../assets/theme";
+<<<<<<< HEAD
+=======
+=======
+import { Category, DirectboxSend, Image, Notification, SearchNormal1 } from 'iconsax-react-native'
+import axios from 'axios';
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
+>>>>>>> 3dc2f48a538df01da88182fbc651c4ef916f2c53
 const EditTraining = ({route}) => {
   const {trainingId} = route.params;
     const [trainingData, setTrainingData] = useState({
@@ -32,6 +43,10 @@ const EditTraining = ({route}) => {
       };
       const [image, setImage] = useState(null);
       const navigation = useNavigation();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3dc2f48a538df01da88182fbc651c4ef916f2c53
       const [oldImage, setOldImage] = useState(null);
       const [loading, setLoading] = useState(true);
       useEffect(() => {
@@ -101,6 +116,55 @@ const EditTraining = ({route}) => {
           navigation.navigate('Training', {trainingId});
         } catch (error) {
           console.log(error);
+<<<<<<< HEAD
+=======
+=======
+      const [loading, setLoading] = useState(true);
+      useEffect(() => {
+        getData();
+      }, [trainingId]);
+    
+      const getData = async () => {
+        try {
+          const response = await axios.get(
+            `https://6570c63f09586eff6641ed29.mockapi.io/bodybuff/training/${trainingId}`,
+          );
+          setTrainingData({
+            title : response.data.title,
+            description : response.data.description,
+            duration : response.data.duration,
+            image : response.data.image,
+          })
+        setImage(response.data.image)
+          setLoading(false);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      const handleUpdate = async () => {
+        setLoading(true);
+        try {
+          await axios
+            .put(`https://6570c63f09586eff6641ed29.mockapi.io/bodybuff/training/${trainingId}`, {
+              title: trainingData.title,
+              image,
+              description: trainingData.description,
+              duration : trainingData.duration,
+              totalComments: trainingData.totalComments,
+              totalLikes: trainingData.totalLikes,
+            })
+            .then(function (response) {
+              console.log(response);
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+          setLoading(false);
+          navigation.navigate('Training');
+        } catch (e) {
+          console.log(e);
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
+>>>>>>> 3dc2f48a538df01da88182fbc651c4ef916f2c53
         }
       };
   return (
@@ -144,6 +208,10 @@ const EditTraining = ({route}) => {
                     style={textInput.title}
                     />
                 </View>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3dc2f48a538df01da88182fbc651c4ef916f2c53
                 {image ? (
           <View style={{position: 'relative'}}>
             <FastImage
@@ -196,6 +264,21 @@ const EditTraining = ({route}) => {
             </View>
           </TouchableOpacity>
         )}
+<<<<<<< HEAD
+=======
+=======
+                <View style={textInput.boardDescription}>
+                    <TextInput
+                    placeholder="URL."
+                    value={image}
+                    onChangeText={(text) => setImage(text)}
+                    placeholderTextColor={'gray'}
+                    multiline
+                    style={textInput.title}
+                    />
+                </View>
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
+>>>>>>> 3dc2f48a538df01da88182fbc651c4ef916f2c53
             </ScrollView>
             <TouchableOpacity onPress={handleUpdate} style={styles.buttonUpload}>
                 <DirectboxSend variant="Bold" color="white" size={'30'}/>
