@@ -1,9 +1,18 @@
 import { useNavigation } from "@react-navigation/native";
+<<<<<<< HEAD
 import { SearchNormal1,Notification, AddCircle,AddSquare,Add } from "iconsax-react-native";
 import React, { useState } from "react";
 import ImagePicker from 'react-native-image-crop-picker';
 import storage from '@react-native-firebase/storage';
 import firestore from '@react-native-firebase/firestore';
+=======
+import { SearchNormal1,Notification, AddCircle } from "iconsax-react-native";
+import React, { useState } from "react";
+<<<<<<< HEAD
+import axios from 'axios';
+=======
+>>>>>>> 2f6d81e56000a3020f493b3c6ff708fb7be4fd01
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
 import {
     View,
     Text,
@@ -14,17 +23,30 @@ import {
     TouchableWithoutFeedback
 } from "react-native";
 import {fontType} from '../../assets/theme';
+<<<<<<< HEAD
 import FastImage from "react-native-fast-image";
 const AddTraining = () => {
     const [loading, setLoading] = useState(false);
+=======
+const AddTraining = () => {
+<<<<<<< HEAD
+    const [loading, setLoading] = useState(false);
+=======
+>>>>>>> 2f6d81e56000a3020f493b3c6ff708fb7be4fd01
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
     const [trainingData, setTrainingData] = useState({
         title: "",
         description: "",
         duration: "",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
         image: "",
         totalLikes: 0,
         totalComments: 0,
     });
+<<<<<<< HEAD
     const handleImagePick = async () => {
         ImagePicker.openPicker({
           width: 1920,
@@ -65,6 +87,37 @@ const AddTraining = () => {
         console.log(error);
         }
         };
+=======
+    const handleUpload = async () => {
+        setLoading(true);
+        try {
+          await axios.post('https://6570c63f09586eff6641ed29.mockapi.io/bodybuff/training', {
+              title: trainingData.title,
+              description: trainingData.description,
+              duration: trainingData.duration,
+              image,
+              totalComments: trainingData.totalComments,
+              totalLikes: trainingData.totalLikes,
+              createdAt: new Date(),
+            })
+            .then(function (response) {
+              console.log(response);
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+          setLoading(false);
+          navigation.navigate('Training');
+        } catch (e) {
+          console.log(e);
+        }
+      };
+=======
+        totalLikes: 0,
+        totalComments: 0,
+    });
+>>>>>>> 2f6d81e56000a3020f493b3c6ff708fb7be4fd01
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
     const handleChange = (key, value) => {
         setTrainingData({
         ...trainingData,
@@ -97,7 +150,15 @@ const AddTraining = () => {
                 <View style={textInput.board}>
                     <TextInput
                     placeholder="Deskripsi Latihan."
+<<<<<<< HEAD
                     value={trainingData.description}
+=======
+<<<<<<< HEAD
+                    value={trainingData.description}
+=======
+                    value={trainingData.title}
+>>>>>>> 2f6d81e56000a3020f493b3c6ff708fb7be4fd01
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
                     onChangeText={(text) => handleChange("description", text)}
                     placeholderTextColor={'gray'}
                     multiline
@@ -107,13 +168,22 @@ const AddTraining = () => {
                 <View style={textInput.board}>
                     <TextInput
                     placeholder="Durasi Latihan."
+<<<<<<< HEAD
                     value={trainingData.duration}
+=======
+<<<<<<< HEAD
+                    value={trainingData.duration}
+=======
+                    value={trainingData.title}
+>>>>>>> 2f6d81e56000a3020f493b3c6ff708fb7be4fd01
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
                     onChangeText={(text) => handleChange("duration", text)}
                     placeholderTextColor={'gray'}
                     multiline
                     style={textInput.title}
                     />
                 </View>
+<<<<<<< HEAD
                 {image ? (
                     <View style={{position: 'relative'}}>
                         <FastImage
@@ -168,6 +238,29 @@ const AddTraining = () => {
                     )}
             </ScrollView>
             <TouchableOpacity onPress={handleUpload} style={{backgroundColor: '#3693F4',padding: 15, flexDirection: 'row',alignItems: 'center', gap: 12, marginHorizontal: 120, borderRadius: 14, position: 'absolute', top: 670,left:192}}>
+=======
+                <View style={textInput.board}>
+                    <TextInput
+                    placeholder="URL."
+<<<<<<< HEAD
+                    value={trainingData.image}
+                    onChangeText={(text) => setImage(text)}
+=======
+                    value={trainingData.title}
+                    onChangeText={(text) => handleChange("image", text)}
+>>>>>>> 2f6d81e56000a3020f493b3c6ff708fb7be4fd01
+                    placeholderTextColor={'gray'}
+                    multiline
+                    style={textInput.title}
+                    />
+                </View>
+            </ScrollView>
+<<<<<<< HEAD
+            <TouchableOpacity onPress={handleUpload} style={{backgroundColor: '#3693F4',padding: 15, flexDirection: 'row',alignItems: 'center', gap: 12, marginHorizontal: 120, borderRadius: 14, position: 'absolute', top: 670,left:192}}>
+=======
+            <TouchableOpacity style={{backgroundColor: '#3693F4',padding: 15, flexDirection: 'row',alignItems: 'center', gap: 12, marginHorizontal: 120, borderRadius: 14, position: 'absolute', top: 670,left:192}}>
+>>>>>>> 2f6d81e56000a3020f493b3c6ff708fb7be4fd01
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
                 <AddCircle variant="Linear" color="white" size={'30'}/>
             </TouchableOpacity>
         </View>

@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import React, {useState,useCallback,useRef,useEffect} from 'react';
+=======
+import React from 'react';
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
 import { Text, View, StyleSheet, Image, ScrollView, TextInput,TouchableOpacity } from 'react-native';
 import { Category,Health,ArrowDown2,Map1 } from 'iconsax-react-native';
 import {fontType} from '../../assets/theme';
 import { Setting2 } from 'iconsax-react-native';
+<<<<<<< HEAD
 import auth from '@react-native-firebase/auth';
 import {useNavigation} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -99,6 +104,10 @@ const Profile = () => {
       console.error(error);
     }
   };
+=======
+
+const Profile = () => {
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
   return (
     <ScrollView>
         <View style={{marginBottom: 20}}>
@@ -141,14 +150,28 @@ const Profile = () => {
                                 <Text style={{color: '#F7F7F7',fontFamily:fontType['Oswald-Bold'], fontSize: 18}}>Help</Text>
                             </View>
                         </TouchableOpacity>
+<<<<<<< HEAD
                         <TouchableOpacity onPress={handleLogout}>
+=======
+                        <TouchableOpacity>
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
                             <View style={{padding: 45,backgroundColor: '#F7F7F7', borderRadius: 20, borderWidth: 1, }}>
                                 <Text style={{color: '#252727',fontFamily:fontType['Oswald-Bold'], fontSize: 18}}>Sign Out</Text>
                             </View>
                         </TouchableOpacity>
                         
                     </View>
+<<<<<<< HEAD
             </View>
+=======
+                    
+                    
+
+                
+            </View>
+            
+    
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
         </View>
     </ScrollView>
     

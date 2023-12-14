@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f6d81e56000a3020f493b3c6ff708fb7be4fd01
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
 import React, {useRef,useEffect} from 'react';
 import { View, TextInput, StyleSheet,Dime, Dimensions,Animated,TouchableOpacity } from 'react-native';
 import { SearchNormal1,Add } from 'iconsax-react-native';
@@ -35,6 +42,27 @@ const SearchBar = ({ searchPhrase, setSearchPhrase }) => {
               
         </Animated.View>
     </Animated.View>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+import { View, TextInput, StyleSheet,Dime, Dimensions } from 'react-native';
+import { SearchNormal1 } from 'iconsax-react-native';
+
+const SearchBar = () => {
+  return (
+    <View style={styles.container}>
+      <SearchNormal1 size="24"  color="#2D2C2C" style={styles.icon}/>
+      <TextInput
+        style={{ marginLeft: 10, flex: 1,marginVertical: 8, }} // Style untuk TextInput
+        placeholder="What do you think ?"
+      />
+    </View>
+>>>>>>> 1d2eedd24a3e82f37869568ca679aaf398ffa437
+>>>>>>> 2f6d81e56000a3020f493b3c6ff708fb7be4fd01
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
   );
 };
 
@@ -51,10 +79,29 @@ const styles = StyleSheet.create({
         alignItems: 'center' ,
         marginBottom: 10, 
         borderRadius:20,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f6d81e56000a3020f493b3c6ff708fb7be4fd01
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
         marginVertical: 10,
         backgroundColor: 'white',
         shadowColor: '#000',
         marginHorizontal: 10,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+        marginTop: -16  ,
+        backgroundColor: 'white',
+        shadowColor: '#000',
+        marginHorizontal: 0,
+>>>>>>> 1d2eedd24a3e82f37869568ca679aaf398ffa437
+>>>>>>> 2f6d81e56000a3020f493b3c6ff708fb7be4fd01
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
         shadowOffset: {
         width: 0,
         height: 7,

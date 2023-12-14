@@ -5,7 +5,11 @@ import {useNavigation} from '@react-navigation/native';
 import FastImage from 'react-native-fast-image';
 import {formatNumber} from '../../utils/formatNumber';
 import {formatDate} from '../../utils/formatDate';
+<<<<<<< HEAD
 import firestore from '@react-native-firebase/firestore';
+=======
+import axios from 'axios';
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
 import { fontType } from '../../assets/theme';
 
 const DetailTraining = ({route}) => {
@@ -14,13 +18,20 @@ const DetailTraining = ({route}) => {
         liked: {variant: 'Linear', color: 'gray'},
         bookmarked: {variant: 'Linear', color: 'gray'},
     });
+<<<<<<< HEAD
     const [selectedItem, setTrainingData] = useState(null);
     const [loading, setLoading] = useState(true);
+=======
+    const [trainingData, setTrainingData] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
     const actionSheetRef = useRef(null);
     const [modalVisible, setModalVisible] = useState(false);
     const openActionSheet = () => {
         actionSheetRef.current?.show();
     };
+<<<<<<< HEAD
     const closeActionSheet = () => {
         actionSheetRef.current?.hide();
     };
@@ -69,6 +80,43 @@ const DetailTraining = ({route}) => {
             }
         };
     
+=======
+
+    const closeActionSheet = () => {
+        actionSheetRef.current?.hide();
+    };
+
+    useEffect(() => {
+        getData();
+    }, [trainingId]);
+
+    const getData = async () => {
+        try {
+        const response = await axios.get(
+            `https://6570c63f09586eff6641ed29.mockapi.io/bodybuff/training/${trainingId}`,
+        );
+        setTrainingData(response.data);
+        setLoading(false);
+        } catch (error) {
+        console.error(error);
+        }
+    };
+
+    const navigateEdit = () => {
+        closeActionSheet()
+        navigation.navigate('EditTraining', {trainingId})
+    }
+    const handleDelete = async () => {
+    await axios.delete(`https://6570c63f09586eff6641ed29.mockapi.io/bodybuff/training/${trainingId}`)
+        .then(() => {
+            closeActionSheet()
+            navigation.navigate('Training');
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+    }
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
     const navigation = useNavigation();
     const scrollY = useRef(new Animated.Value(0)).current;
     const diffClampY = Animated.diffClamp(scrollY, 0, 52);
@@ -119,18 +167,30 @@ const DetailTraining = ({route}) => {
             <FastImage
                 style={{width: 200,height:200, marginTop: 40}}
                 source={{
+<<<<<<< HEAD
                 uri: selectedItem?.image,
+=======
+                uri: trainingData?.image,
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
                 headers: {Authorization: 'someAuthToken'},
                 priority: FastImage.priority.high,
                 }}
                 resizeMode={FastImage.resizeMode.cover}></FastImage>
             </View>
             <View style={{flexDirection: 'row',gap:60, padding: 20}}>
+<<<<<<< HEAD
                 <Text style={{fontFamily: fontType['Mukta-ExtraBold'],fontSize: 18}}>{selectedItem?.title}</Text>
                 <Text style={{fontFamily: fontType['Mukta-ExtraBold'],fontSize: 18}}>{selectedItem?.duration}</Text>
             </View>
             <View style={{padding: 20}}>
                 <Text style={{fontFamily: fontType['Pjs-Light'],fontSize: 18}}>{selectedItem?.description}</Text>
+=======
+                <Text style={{fontFamily: fontType['Mukta-ExtraBold'],fontSize: 18}}>{trainingData?.title}</Text>
+                <Text style={{fontFamily: fontType['Mukta-ExtraBold'],fontSize: 18}}>{trainingData?.duration}</Text>
+            </View>
+            <View style={{padding: 20}}>
+                <Text style={{fontFamily: fontType['Pjs-Light'],fontSize: 18}}>{trainingData?.description}</Text>
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
             </View>
             <View style={{padding: 20, alignItems: 'center', backgroundColor: '#7A9EFF', marginHorizontal: 16, borderRadius: 20}}>
                 <Text  style={{fontFamily: fontType['Mukta-ExtraBold'],fontSize: 15,color: 'white'}}>Start Now</Text>
@@ -148,13 +208,21 @@ const DetailTraining = ({route}) => {
             />
             </TouchableOpacity>
             <Text style={styles.info}>
+<<<<<<< HEAD
             {formatNumber(selectedItem?.totalLikes)}
+=======
+            {formatNumber(trainingData?.totalLikes)}
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
             </Text>
         </View>
         <View style={{flexDirection: 'row', gap: 5, alignItems: 'center'}}>
             <Message color='gray' variant="Linear" size={24} />
             <Text style={styles.info}>
+<<<<<<< HEAD
             {formatNumber(selectedItem?.totalComments)}
+=======
+            {formatNumber(trainingData?.totalComments)}
+>>>>>>> 85b3339ce3adc4be81b64709bcf050cb4b1354ab
             </Text>
         </View>
         <TouchableOpacity onPress={() => toggleIcon('bookmarked')}>
