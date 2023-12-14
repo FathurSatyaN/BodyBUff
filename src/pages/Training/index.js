@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ScrollView, StyleSheet, Text, View,Image,Animated, TouchableOpacity } from 'react-native'
 import React, {useRef} from 'react'
 import {fontType} from '../../assets/theme';
@@ -30,6 +31,24 @@ const Training = () => {
           </View>
         </TouchableOpacity>
         <View style={events.container}>
+=======
+import { ScrollView, StyleSheet, Text, View,Image } from 'react-native'
+import React from 'react'
+import {fontType} from '../../assets/theme';
+import SearchBar from '../../../components/searchBar'
+
+const Training = () => {
+  return (
+    <ScrollView>
+        <View style={{padding: 30, backgroundColor: '#252727'}}>
+            <Text style={{color: '#F7F7F7',fontFamily:fontType['Oswald-Bold'], fontSize: 18}}>Training</Text>
+        </View>
+
+        <SearchBar/>
+
+        <View style={events.container}>
+            
+>>>>>>> 1d2eedd24a3e82f37869568ca679aaf398ffa437
             <View style={events.content}>
               <Image style={events.image} source={{
                 uri:
@@ -42,8 +61,16 @@ const Training = () => {
               }}
             ></Image>
             </View>
+<<<<<<< HEAD
           </View>
           <View style={events.container}>
+=======
+            
+            
+          </View>
+          <View style={events.container}>
+            
+>>>>>>> 1d2eedd24a3e82f37869568ca679aaf398ffa437
             <View style={events.content}>
               <Image style={events.image} source={{
                 uri:
@@ -56,8 +83,16 @@ const Training = () => {
               }}
             ></Image>
             </View>
+<<<<<<< HEAD
           </View>
           <View style={events.container}>
+=======
+            
+            
+          </View>
+          <View style={events.container}>
+            
+>>>>>>> 1d2eedd24a3e82f37869568ca679aaf398ffa437
             <View style={events.content}>
               <Image style={events.image} source={{
                 uri:
@@ -70,6 +105,11 @@ const Training = () => {
               }}
             ></Image>
             </View>
+<<<<<<< HEAD
+=======
+            
+            
+>>>>>>> 1d2eedd24a3e82f37869568ca679aaf398ffa437
           </View>
           <View style={events.container}>
             
@@ -85,6 +125,7 @@ const Training = () => {
               }}
             ></Image>
             </View>
+<<<<<<< HEAD
           </View>
     </Animated.ScrollView>
     <TouchableOpacity style={{padding: 20, position:'absolute', top: 630,right: 20, backgroundColor:'#252727',borderRadius: 20}} onPress={() => navigation.navigate("AddTraining")}>
@@ -94,11 +135,27 @@ const Training = () => {
   )
 }
 export default Training
+=======
+            
+            
+          </View>
+    </ScrollView>
+    
+  )
+}
+
+export default Training
+
+>>>>>>> 1d2eedd24a3e82f37869568ca679aaf398ffa437
 const styles = StyleSheet.create({})
 const events = StyleSheet.create({
     container:{
       flexDirection: 'column',
+<<<<<<< HEAD
       marginVertical: 6,
+=======
+      marginVertical: 1,
+>>>>>>> 1d2eedd24a3e82f37869568ca679aaf398ffa437
       alignItems: 'center'
     },
     content: {

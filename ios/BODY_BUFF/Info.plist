@@ -53,6 +53,16 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 35aca34d54b2e2b4dd11b56d91d5468e1ff30d6e
+>>>>>>> c8e9f27eb52d536c0fdddecb8bc24857da14b9cc
+>>>>>>> 1d2eedd24a3e82f37869568ca679aaf398ffa437
 		<string>Mukta-Bold.ttf</string>
 		<string>Mukta-ExtraBold.ttf</string>
 		<string>Mukta-ExtraLight.ttf</string>
@@ -66,6 +76,18 @@
 		<string>Oswald-Medium.ttf</string>
 		<string>Oswald-Regular.ttf</string>
 		<string>Oswald-SemiBold.ttf</string>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+		<string>Koulen-Regular.ttf</string>
+>>>>>>> 23ad015076fb57fc81376f5aa1004b200fe99843
+>>>>>>> 35aca34d54b2e2b4dd11b56d91d5468e1ff30d6e
+>>>>>>> c8e9f27eb52d536c0fdddecb8bc24857da14b9cc
+>>>>>>> 1d2eedd24a3e82f37869568ca679aaf398ffa437
 	</array>
 </dict>
 </plist>
